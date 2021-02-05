@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rasa&family=Rosarivo&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/CSSRulePlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollToPlugin.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+    <title>Sapiens | A short summary</title>
+  </head>
+  <body>
+  <header>
+    <div class="container">
+      <div class="title">
+        <h1>Sapiens</h1>
+        <h2 class="sub-title">A Brief History Of Humankind</h2>
+        <div class="brush-stroke">
+          <p>A short time-line summary</p>
+        </div>
+      </div>
+      <h2 class="start-text">ABOUT 13.5 BILLION YEARS AGO</h2>
+      <div class="button" onclick="startBtn()">
+        <span>Start</span>
+      </div>
+    </div>
+  </header>
+
+  <section class="container-paths">
+    <svg preserveAspectRatio="xMinYMin meet" class="path_left" width="450" height="600" viewBox="0 0 450 600">
+      <path d="M 0 600 C 260 327 202 133 450 0 L 0 0"></path>
+    </svg>
+    <svg preserveAspectRatio="xMinYMin meet" class="path_right" width="450" height="600" viewBox="0 0 450 600">
+      <path d="M 0 600 C 260 327 202 133 450 0 L 0 0"></path>
+    </svg>
+  </section>
+
+  <div class="stars">
+    <h2 data-splitting="words">...matter, energy, time and space came into being</h2>
+  </div>
+  
+  <div class="modulo content-box">
+    <img src="">
+    <p class="caption"></p>
+  </div>
+
+  <section id="content">
+    <i id="timeline"></i>
+    <div class="container-small">
+      <div class="fact-small">
+        <i class="fact-circle"></i><i class="fact-arrow"></i>
+        <h3 data-splitting="words">Matter and energy started to coalesce into complex structures, called atoms and molecules.</h3>
+      </div>
+    </div>
+    <div class="time">
+      <p>4.5 billion years ago</p>
+      <div class="mask"></div>
+    </div>
+    <div class="container-small">
+      <div class="fact-small">
+        <i class="fact-circle"></i><i class="fact-arrow"></i>
+        <h3 data-splitting="words">Gravity pulled swirling gas and dust in to become the third planet from the Sun.</h3>
+      </div>
+    </div>
+    <div class="time"><p>3.8 billion years ago</p></div>
+    <div class="container-small">
+      <div class="fact-small">
+        <i class="fact-circle"></i><i class="fact-arrow"></i>
+        <h3 data-splitting="words">Certain molecules combined to form particularly large and intricate structures called organisms.</h3>
+      </div>
+    </div>
+    <div class="time"><p>2.5 million years ago</p></div>
+    <div class="container-large">
+      <div class="fact-large">
+        <h4>Beginning of Man</h4>
+        <p>Humans first evolved in East Africa, from an earlier genus of apes called Australopithecus, which means ‘Southern Ape’. About 2 million years ago, some of these archaic men and women left their homeland to journey through and settle vast areas of <button id="btn-africa" onClick="asideContentHomo(this)">Africa</button>, <button id="btn-europe" onClick="asideContentHomo(this)">Europe</button> and <button id="btn-asia" onClick="asideContentHomo(this)">Asia</button>.</p>
+        <p class="more">On the island of Java, in Indonesia, lived Homo soloensis (although there are only a few <button onClick="imageBox(this)" data-src="/img/half_skull.jpg" data-caption="Half a skull of Homo Soloensis">bone fragments</button> found, not enough for a model)</p>
+        <p class="more"><button id="btn-flores" onClick="asideContentHomo(this)">Dwarfes</button> of the Flores islands</p>
+        <button class="more" onClick="imageBox(this)" data-src="/img/homo_map.jpg" data-caption="A map of aincient human migration patterns">And many others...</button>
+        <br>
+        <p class="more">We recognize these mammals as humans because of the first recorded tool manufacture and use around the same time.</p>
+        <p class="more">But despite their big brains and sharp stone tools, they dwelt in constant fear of predators, rarely hunted large game, and subsisted mainly by gathering plants, scooping up insects, stalking small animals, and eating the bones left behind by other more powerful carnivores.</p>
+        <p class="more">These archaic humans loved, played, formed close friendships and competed for status and power – but so did chimpanzees, baboons and elephants. There was nothing special about humans.</p>
+        <button class="read-more" onClick="readMore(this)">Read more...</button>
+      </div>
+      <aside id="africa">
+        <input type="image" src="/img/utility/close.png" alt="close" class="close-x" onclick="closeParentAside(this)">
+        <img src="/img/homo_africa.jpg" alt="Australopithecus africanus">
+        <div class="desc">
+          <h4>Australopithecus africanus</h4>
+          <p class="param"><strong>Height:</strong> <img src="/img/utility/man.png" alt="man"> 138cm  <img src="/img/utility/woman.png" alt="woman"> 115cm </p>
+          <p class="param"><strong>Weight:</strong> <img src="/img/utility/man.png" alt="man"> 41kg  <img src="/img/utility/woman.png" alt="woman"> 30kg </p>
+          <img src="/img/homo_africa_time.png" alt="" class="time-img">
+          <p>Currently the oldest known early human from Africa. Compared to its ancestors, they had a larger brain and smaller teeth, but also had some ape-like features including relatively long arms and a strongly sloping face that juts out from underneath the braincase with a pronounced jaw. The pelvis, femur and foot bones of Au. africanus indicate that it walked bipedally, but its shoulder and hand bones indicate they were also adapted for climbing,</p>
+        </div>
+      </aside>
+      <aside id="europe">
+        <input type="image" src="/img/utility/close.png" alt="close" class="close-x" onclick="closeParentAside(this)">
+        <img src="/img/homo_europe.jpg" alt="Homo neanderthalensis">
+        <div class="desc">
+          <h4>Homo neanderthalensis</h4>
+          <p class="param"><strong>Height:</strong> <img src="/img/utility/man.png" alt="man"> 164cm  <img src="/img/utility/woman.png" alt="woman"> 155cm </p>
+          <p class="param"><strong>Weight:</strong> <img src="/img/utility/man.png" alt="man"> 65kg  <img src="/img/utility/woman.png" alt="woman"> 54kg </p>
+          <img src="/img/homo_europe_time.png" alt="" class="time-img">
+          <p>Neanderthals are our closest extinct human relative. Some defining features of their skulls include the large middle part of the face, angled cheek bones, and a huge nose for humidifying and warming cold, dry air. Their bodies were shorter and stockier than ours, another adaptation to living in cold environments. But their brains were just as large as ours and often larger - proportional to their brawnier bodies.</p>
+          <p>Neanderthals made and used a diverse set of sophisticated tools, controlled fire, lived in shelters, made and wore clothing, were skilled hunters of large animals and also ate plant foods, and occasionally made symbolic or ornamental objects. There is evidence that Neanderthals deliberately buried their dead and occasionally even marked their graves with offerings, such as flowers. No other primates, and no earlier human species, had ever practiced this sophisticated and symbolic behavior.</p>
+        </div>
+      </aside>
+      <aside id="asia">
+        <input type="image" src="/img/utility/close.png" alt="close" class="close-x" onclick="closeParentAside(this)">
+        <img src="/img/homo_asia.jpg" alt="Homo erectus">
+        <div class="desc">
+          <h4>Homo erectus</h4>
+          <p class="param"><strong>Height:</strong> <img src="/img/utility/man.png" alt="man"> <img src="/img/utility/woman.png" alt="woman"> 145 - 185cm</p>
+          <p class="param"><strong>Weight:</strong> <img src="/img/utility/man.png" alt="man"> <img src="/img/utility/woman.png" alt="woman"> 40-68kg </p>
+          <img src="/img/homo_asia_time.png" alt="" class="time-img">
+          <p> The oldest known early humans to have possessed modern human-like body proportions with relatively elongated legs and shorter arms compared to the size of the torso, who survived there for close to 2 million years, making it the most durable human species ever. These features are considered adaptations to a life lived on the ground, indicating the loss of earlier tree-climbing adaptations, with the ability to walk and possibly run long distances. The appearance of Homo erectus in the fossil record is often associated with the earliest handaxes, the first major innovation in stone tool technology.</p>
+          <p>The earliest evidence of campfires occur during the time range of Homo erectus. While we have evidence that those were used for cooking (and probably sharing) food, they are likely to have been places for social interaction, and also used for warmth and to keep away large predators. Eating meat and other types of protein that could be quickly digested made it possible to absorb nutrients with a shorter digestive tract, making more energy available faster. </p>
+        </div>
+      </aside>
+      <aside id="flores">
+        <input type="image" src="/img/utility/close.png" alt="close" class="close-x" onclick="closeParentAside(this)">
+        <img src="/img/homo_flores.jpg" alt="Homo floresiensis">
+        <div class="desc">
+          <h4>Homo floresiensis</h4>
+          <p class="param"><strong>Height:</strong> <img src="/img/utility/man.png" alt="man"> -  <img src="/img/utility/woman.png" alt="woman"> 106cm </p>
+          <p class="param"><strong>Weight:</strong> <img src="/img/utility/man.png" alt="man"> -  <img src="/img/utility/woman.png" alt="woman"> 30kg </p>
+          <img src="/img/homo_europe_time.png" alt="" class="time-img">
+          <p> One of the most recently discovered early human species (nicknamed ‘Hobbit’), have so far only been found on the Island of Flores, Indonesia. H. floresiensis individuals stood approximately 3 feet 6 inches tall, had tiny brains, large teeth for their small size, shrugged-forward shoulders, no chins, receding foreheads, and relatively large feet due to their short legs. Despite their small body and brain size, H. floresiensis made and used stone tools, hunted small elephants and large rodents, coped with predators such as giant Komodo dragons, and may have used fire.  </p>
+          <p>The diminutive stature and small brain of H. floresiensis may have resulted from island dwarfism—an evolutionary process that results from long-term isolation on a small island with limited food resources and a lack of predators. Pygmy elephants on Flores, now extinct, showed the same adaptation. However, some scientists are now considering the possibility that the ancestors of H. floresiensis may have been small when they first reached Flores.</p>
+        </div>
+      </aside>
+    </div>
+    <div class="time"><p>300,000 years ago</p></div>
+    <div class="container-large">
+      <div class="fact-large">
+        <h4>Fire</h4>
+        <p>A significant step on the way to the top was the domestication of fire. Some human species may have made occasional use of fire as early as 800,000 years ago. But by about 300,000 years ago, almost every genus Homo used it daily.</p>
+        <p class="more">Not long afterwards, humans may even have started deliberately to torch their neighbourhoods. A carefully managed fire could turn impassable barren thickets into prime grasslands teeming with game. In addition, once the fire died down, Stone Age entrepreneurs could walk through the smoking remains and harvest charcoaled animals, nuts and tubers.</p>
+        <p class="more">Fire not only changed food’s chemistry, it changed its biology as well. Cooking killed germs and parasites that infested food. Humans also had a far easier time chewing and digesting old favourites such as fruits, nuts, insects and carrion if they were cooked. Whereas chimpanzees spend five hours a day chewing raw food, a single hour suffices for people eating cooked food.</p>
+        <p class="more">Some scholars believe there is a direct link between the advent of cooking, the shortening of the human intestinal track, and the growth of the human brain.</p>
+        <button class="read-more" onClick="readMore(this)">Read more...</button>
+      </div>
+    </div>
+    <div class="time"><p>100,000 years ago</p></div>
+    <div class="container-small">
+      <div class="fact-small">
+        <i class="fact-circle"></i><i class="fact-arrow"></i>
+        <h3 data-splitting="words">Hunting large game has become the norm. The Man has jumped to the top of the food chain</h3>
+      </div>
+    </div>
+    <div class="container-small">
+      <div class="fact-small">
+        <i class="fact-circle"></i><i class="fact-arrow"></i>
+        <h3 data-splitting="words">Some Sapiens groups tried migrating North, but failed - leaving the Neanderthals as masters of the Middle East/Europe</h3>
+      </div>
+    </div>
+    <div class="time"><p>70,000 years ago</p></div>
+    <div class="container-large">
+      <div class="fact-large">
+        <h4>Cognitive Revolution</h4>
+        <p>Around this time, Homo sapiens started doing very special things. Sapiens bands left Africa for a second time, but this time they drove the Neanderthals and all other human species not only from the Middle East, but from the face of the earth.</p>
+        <p class="more">When Homo sapiens landed in Arabia, most of Eurasia was already settled by other humans. What happened to them? There are two conflicting theories. The <button id="btn-interbreeding" onClick="asideContentTheory(this)">‘Interbreeding Theory’</button> and The <button id="btn-replacement" onClick="asideContentTheory(this)">‘Replacement Theory’</button></p>
+        <p class="more">But in 2010, when the results of a four-year effort to map the Neanderthal genome were published. Geneticists were able to collect enough intact Neanderthal DNA from fossils to make a broad comparison between it and the DNA of contemporary humans. And it turned out that 1–4% of the unique human DNA of modern populations in the Middle East and Europe is Neanderthal DNA. That’s not a huge amount, but it’s significant. Showing that interbreeding did happen, but not enough for the species to fully mix.
+        </p>
+        <p class="more">Imagine a Sapiens band reaching a Balkan valley where Neanderthals had lived for hundreds of thousands of years. The newcomers began to hunt the deer and gather the nuts and berries that were the Neanderthals’ traditional staples. Sapiens were more proficient hunters and gatherers – thanks to better technology and superior social skills – so they multiplied and spread. The less resourceful Neanderthals found it increasingly difficult to feed themselves. Their population dwindled and they slowly died out, except perhaps for one or two members who joined their Sapiens neighbours.</p>
+        <p class="more">So it may well be that when Sapiens encountered Neanderthals, the result was the first and most significant ethnic-cleansing campaign in history.</p>
+        <button class="read-more" onClick="readMore(this)">Read more...</button>
+      </div>
+      <aside id="interbreeding">
+        <input type="image" src="/img/utility/close.png" alt="close" class="close-x" onclick="closeParentAside(this)">
+        <img src="/img/heart.png" alt="Homo erectus">
+        <div class="desc">
+          <h4>Interbreeding Theory</h4>
+          <p>A story of attraction, sex and mingling. As the African immigrants spread around the world, they bred with other human populations, and people today are the outcome of this interbreeding.</p>
+          <p>According to the theory, when Sapiens spread into Neanderthal lands, Sapiens bred with Neanderthals until the two populations merged. If this is the case, then today’s Eurasians are not pure Sapiens. They are a mixture of Sapiens and Neanderthals. Similarly, when Sapiens reached East Asia, they interbred with the local Erectus, so the Chinese and Koreans are a mixture of Sapiens and Erectus.</p>
+          <p>If the theory is right, there might well be genetic differences between Africans, Europeans and Asians that go back hundreds of thousands of years.</p>
+        </div>
+      </aside>
+      <aside id="replacement">
+        <input type="image" src="/img/utility/close.png" alt="close" class="close-x" onclick="closeParentAside(this)">
+        <img src="/img/skull.png" alt="Homo erectus">
+        <div class="desc">
+          <h4>Replacement Theory</h4>
+          <p>The opposing view tells a very different story – one of incompatibility, revulsion, and perhaps even genocide.</p>
+          <p>According to the theory, Sapiens and other humans had different anatomies, and most likely different mating habits and even body odours. They would have had little sexual interest in one another. And even if a Neanderthal Romeo and a Sapiens Juliet fell in love, they could not produce fertile children, because the genetic gulf separating the two populations was already unbridgeable. The two populations remained completely distinct, and when the Neanderthals died out, or were killed off, their genes died with them. According to this view, Sapiens replaced all the previous human populations without merging with them. If that is the case, the lineages of all contemporary humans can be traced back, exclusively, to East Africa, 70,000 years ago.</p>
+          <p>Another possibility is that competition for resources flared up into violence and genocide. Tolerance is not a Sapiens trademark. In modern times, a small difference in skin colour, dialect or religion has been enough to prompt one group of Sapiens to set about exterminating another group.</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+  <script> Splitting(); </script>  
+  <script src="/js/main.js"></script>
+  </body>
+</html>
