@@ -198,10 +198,10 @@ function factStylingMobile(){
 
 
 function startBtn(){
-  // start();
+  start();
   setTimeout(function (){
     timelineAnimation();
-  }, 10);
+  }, 5000);
 }
 
 function timelineAnimation(){

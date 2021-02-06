@@ -211,13 +211,13 @@ p {
 
 #timeline {
   position: absolute;
-  top: -10vh;
+  top: -20vh;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   background: #000;
   width: 2px;
-  height: 100%;
+  height: 120%;
   z-index: -1;
   opacity: 0;
 }
@@ -231,7 +231,7 @@ p {
   width: calc(30vw + 2rem);
   height: calc(5vw + 2rem);
   text-align: center;
-  margin: 4rem auto 7rem;
+  margin: 9rem auto 7rem;
   -webkit-transform: translate(0, 50%);
           transform: translate(0, 50%);
   -webkit-clip-path: inset(0px 300px 0px 0px);
@@ -269,7 +269,7 @@ p {
       -ms-flex-align: space-between;
           align-items: space-between;
   width: 45vw;
-  margin: 3rem auto 1rem;
+  margin: 9rem auto;
   height: 100%;
   text-align: center;
 }
