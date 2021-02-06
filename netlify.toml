@@ -6,8 +6,8 @@
   package = "netlify-plugin-csp-generator"
  
   [plugins.inputs]
-  buildDir = "dist"  // the path for the publish directory in Netlify
- 
+  buildDir = "dist" 
+  
   [plugins.inputs.policies]
     defaultSrc = "*"
     styleSrc = "*"
