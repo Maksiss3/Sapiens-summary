@@ -242,7 +242,7 @@ function start(){
   
   gsap.to('.start-text', {opacity: 1, y: -50, duration: 2,})
   gsap.to('.stars', {duration: 2 , delay: 2, height: 'calc(100vh*30)',});
-  gsap.to(window, {delay: 3, duration: 4, ease: "power4.out", scrollTo: {y: offset_height}});
+  gsap.to(window, {delay: 4, duration: 4, ease: "power4.out", scrollTo: {y: '.stars h2', offsetY:'400'}});
   gsap.to('.stars h2', {opacity: 1});
   gsap.from('.stars h2 .word', { stagger: 0.2, delay: 5, duration: 3, y: 70, opacity: 0, ease: Back.easeInOut.config(0.3)})
   gsap.fromTo('#timeline', {scaleY: 0, opacity: 1},{transformOrigin: "top", duration: 5, ease: "expo.in", scaleY: 1, delay: 6})
