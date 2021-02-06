@@ -68,9 +68,11 @@ function asideContentTheory(btn){
     if(matching_aside.id == 'interbreeding'){    //Remove aside if already exists
       matching_aside.classList.add('left');
       matching_aside.style.display = "block";
+      asideAnimate(matching_aside, 'left');
     } else if (matching_aside.id == 'replacement'){
       matching_aside.classList.add('right');
       matching_aside.style.display = "block";
+      asideAnimate(matching_aside, 'right');
     }
   }
 }
@@ -138,13 +140,13 @@ function toggleAsides (id, add_class, add_class_elem, remove_class_elem){  // Ad
   container_obj[add_class] = id;
   container_obj.last = add_class;
   add_class_elem.style.display = "block";
+  asideAnimate(add_class_elem, add_class);
 }
 
-
-function closeParentAside(btn){
-  btn.parentElement.style.display = "none";
-  aside_class = btn.parentElement.classList[0];
-  btn.parentElement.removeAttribute('class');
+function closeParentAside(aside){
+  aside.style.display = "none";
+  aside_class = aside.classList[0];
+  aside.removeAttribute('class');
   container_obj[aside_class] = 0;
 }
 
@@ -196,10 +198,10 @@ function factStylingMobile(){
 
 
 function startBtn(){
-  start();
+  // start();
   setTimeout(function (){
     timelineAnimation();
-  }, 5000);
+  }, 10);
 }
 
 function timelineAnimation(){
@@ -313,6 +315,20 @@ function smallFactTimelineMob(fact){
 }
 
 
-function asideAnimate(aside){
-  img = aside.querySelector('');
+function asideAnimate(aside, side){
+  x = (side == 'left') ? -700 : 700;
+  img = aside.querySelector('img');
+  desc = aside.querySelector('.desc');
+  close_x = aside.querySelector('.close-x');
+  var aside_tl = gsap.timeline({onComplete: () => {
+    close_x.addEventListener('click', ()=>{
+      setTimeout(function (){
+        closeParentAside(aside);
+      }, 1000);
+      aside_tl.reverse();
+    }, {once: true})
+  }})
+
+  aside_tl.from(img, {x: x, duration: 0.5,})
+  aside_tl.fromTo(desc,{clipPath: 'inset(0% 0% 100% 0%)'},{duration: 0.5, clipPath: 'inset(0% 0% 0% 0%)'})
 }

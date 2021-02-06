@@ -324,6 +324,7 @@ p {
   width: 12px !important;
   height: 12px !important;
   right: 5px !important;
+  z-index: 5 !important;
 }
 
 .aside-box::before {
@@ -373,6 +374,7 @@ p {
   height: 28px !important;
   -webkit-filter: invert(24%) sepia(81%) saturate(1887%) hue-rotate(341deg) brightness(94%) contrast(98%);
           filter: invert(24%) sepia(81%) saturate(1887%) hue-rotate(341deg) brightness(94%) contrast(98%);
+  z-index: 5;
 }
 
 .time-img {
@@ -469,6 +471,7 @@ p {
 
 .left .close-x {
   right: 5px;
+  z-index: 5;
 }
 
 .right {
@@ -481,6 +484,7 @@ p {
 
 .right .close-x {
   left: 5px;
+  z-index: 5;
 }
 
 @media screen and (max-width: 600px) {

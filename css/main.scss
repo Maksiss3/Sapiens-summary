@@ -288,6 +288,7 @@ p{
     width: 12px !important;
     height: 12px !important;
     right: 5px !important;
+    z-index: 5 !important;
   }
   
   &::before{
@@ -334,6 +335,7 @@ p{
   width: 28px !important;
   height: 28px !important;
   filter: invert(24%) sepia(81%) saturate(1887%) hue-rotate(341deg) brightness(94%) contrast(98%);
+  z-index: 5;
 }
 
 .time-img{
@@ -409,6 +411,7 @@ p{
   }
   .close-x{
     right: 5px;
+    z-index: 5;
   }
 }
 
@@ -419,6 +422,7 @@ p{
   }
   .close-x{
     left: 5px;
+    z-index: 5;
   }
 }
 
