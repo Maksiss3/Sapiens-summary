@@ -1,6 +1,12 @@
+[build]
+  base = "project/"
+  publish = "build-output/"
+  command = "echo 'default context'"
+  functions = "functions/"
+
 [[plugins]]
-package = "netlify-plugin-csp-generator"
-package = "netlify-plugin-csp-headers"
+  package = "netlify-plugin-csp-generator"
+  package = "netlify-plugin-csp-headers"
  
   [plugins.inputs]
   buildDir = "dist"  // the path for the publish directory in Netlify
