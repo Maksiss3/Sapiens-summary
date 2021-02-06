@@ -1,7 +1,5 @@
 [build]
-  base = "project/"
-  publish = "build-output/"
-  command = "echo 'default context'"
+  publish = "build/"
   functions = "functions/"
 
 [[plugins]]
