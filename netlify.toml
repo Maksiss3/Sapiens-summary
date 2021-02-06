@@ -9,5 +9,10 @@
   buildDir = "dist"  // the path for the publish directory in Netlify
  
   [plugins.inputs.policies]
-    defaultSrc = "'self'"
-    styleSrc = "'self' 'unsafe-hashes'"
+    defaultSrc = "*"
+    styleSrc = "*"
+    script-src = "*"
+    connect-src = "*"
+    img-src = "*"
+    base-uri = "*"
+    form-action = "*"
