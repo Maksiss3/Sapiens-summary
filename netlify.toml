@@ -1,0 +1,10 @@
+[[plugins]]
+package = "netlify-plugin-csp-generator"
+package = "netlify-plugin-csp-headers"
+ 
+  [plugins.inputs]
+  buildDir = "dist"  // the path for the publish directory in Netlify
+ 
+  [plugins.inputs.policies]
+    defaultSrc = "'self'"
+    styleSrc = "'self' 'unsafe-hashes'"
